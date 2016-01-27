@@ -1,0 +1,24 @@
+<div>
+	<h2><small>{{titlePage}}</small></h2>
+	<div class="jumbotron">
+		<div class="container">
+			<a ui-sref="usuarios" class="btn btn-white btn-outline btn-rounded btn-sm" style="top: -30px;right: 70px;color:black; box-shadow: 0 0 0 2px rgba(45, 43, 43, 0.8) inset;position:relative;"><i class="fa fa-angle-double-left"></i></a>
+			<form role="form">
+        <div class="form-group">
+          <label for="nome">Nome:</label>
+          <input type="text" class="form-control" id="nome" ng-model="usuario.nome">
+        </div>
+        <div class="form-group">
+          <label for="nome">Email:</label>
+          <input type="text" class="form-control" id="email" ng-model="usuario.email">
+        </div>
+        <div class="form-group">
+          <label for="pwd">Password:</label>
+          <input type="password" class="form-control" id="pwd" ng-model="usuario.senha">
+        </div>
+        <button type="submit" ng-show="botaoInserir" ng-click="salvar(usuario)" class="btn btn-success">Cadastrar</button>
+				<button type="submit" ng-show="botaoAlterar" ng-click="alterar()" class="btn btn-primary">Alterar</button>
+      </form>
+		</div>
+	</div>
+</div>

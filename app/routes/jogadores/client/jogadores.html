@@ -1,0 +1,28 @@
+<div>
+	<h2><small>{{titlePage}}</small></h2>
+	<div class="jumbotron">
+		<div class="container">
+		<div style="margin-bottom: 15px;">
+			<button type="button" class="btn btn-success" ng-click="inserir()">Novo Jogador</button>
+			<button style="padding: 4px 10px;" type="button" class="btn btn-primary" ng-click="alterar()">Alterar</button>
+			<button style="padding: 4px 10px;" type="button" class="btn btn-danger" ng-click="remover()">Excluir</button>
+		</div>
+		<style>
+		.selected {
+		    background-color:#ccc;
+		}
+		</style>
+			<table class="table table-bordered">
+				<th> Nome </th>
+				<th> Posição </th>
+        <th> Idade </th>
+				<tr ng-repeat="jogador in jogadores" ng-click="selecionar(jogador)" ng-class="{'selected':jogador == selecionado}">
+						<td>{{ jogador.nome }}</td>
+						<td>{{ jogador.posicao }}</td>
+						<td>{{ jogador.idade }}</td>
+				</tr>
+			</table>
+
+		</div>
+	</div>
+</div>

@@ -1,0 +1,78 @@
+<div>
+	<h2><small>{{titlePage}}</small></h2>
+	<div class="jumbotron">
+		<div class="container">
+			<a ui-sref="usuarios" class="btn btn-white btn-outline btn-rounded btn-sm" style="top: -30px;right: 70px;color:black; box-shadow: 0 0 0 2px rgba(45, 43, 43, 0.8) inset;position:relative;"><i class="fa fa-angle-double-left"></i></a>
+			<form role="form">
+        <div class="row">
+          <div class="col-sm-12">
+            <label for="nome">Nome:</label>
+            <input type="text" class="form-control" id="nome" ng-model="jogador.nome">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <label for="doc">Numero Documento:</label>
+            <input type="text" class="form-control" id="doc" ng-model="jogador.documento">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <label for="nasc">Data Nascimento:</label>
+            <input type="date" class="form-control" id="nasc" ng-model="jogador.dataNascimento">
+          </div>
+          <div class="col-sm-4">
+            <label for="nasc">Posição:</label>
+            <select class="form-control" ng-model="posicaoSelected" ng-options="pos as pos.name for pos in posicoes"></select>
+          </div>
+          <div class="col-sm-4">
+            <label for="nasc">Perna preferencial:</label>
+            <select class="form-control" ng-model="pernaSelected" ng-options="perna as perna.name for perna in pernas"></select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-5">
+            <label for="nasc">Bairro:</label>
+            <input type="text" class="form-control" id="bairro" ng-model="jogador.bairro">
+          </div>
+          <div class="col-sm-5">
+            <label for="cidade">Cidade:</label>
+            <input type="text" class="form-control" id="cidade" ng-model="jogador.cidade">
+          </div>
+          <div class="col-sm-2">
+            <label for="estado">Estado:</label>
+            <input type="text" class="form-control" id="estado" ng-model="jogador.estado">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-10">
+            <label for="rua">Rua:</label>
+            <input type="text" class="form-control" id="rua" ng-model="jogador.rua">
+          </div>
+          <div class="col-sm-2">
+            <label for="nasc">Numero:</label>
+            <input type="text" class="form-control" id="nasc" ng-model="jogador.numero">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <label for="tel">Telefone:</label>
+            <input type="text" class="form-control" id="tel" ng-model="jogador.telefone">
+          </div>
+          <div class="col-sm-6">
+            <label for="nasc">Celular:</label>
+            <input type="text" class="form-control" id="nasc" ng-model="jogador.celular">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <label for="email">Email:</label>
+            <input type="text" class="form-control" id="email" ng-model="jogador.email">
+          </div>
+        </div> <br />
+        <button type="submit" ng-show="botaoInserir" ng-click="salvar(jogador)" class="btn btn-success">Cadastrar</button>
+				<button type="submit" ng-show="botaoAlterar" ng-click="alterar()" class="btn btn-primary">Alterar</button>
+      </form>
+		</div>
+	</div>
+</div>
